@@ -9,13 +9,21 @@
         <atom:link href="/rss.xml" rel="self" type="application/rss+xml"/>
         <lastBuildDate>Thu, 21 Mar 2019 00:00:00 +0000</lastBuildDate>
         <item>
-            <title>Slow Boil</title>
+            <title>About</title>
             <pubDate>Thu, 21 Mar 2019 00:00:00 +0000</pubDate>
             <link>/about/</link>
             <guid>/about/</guid>
             <description>&lt;p&gt;boiling...&lt;&#x2F;p&gt;
 &lt;p&gt;boiling...&lt;&#x2F;p&gt;
 &lt;p&gt;boiling...&lt;&#x2F;p&gt;
+</description>
+        </item>
+        <item>
+            <title>Schedule</title>
+            <pubDate>Thu, 21 Mar 2019 00:00:00 +0000</pubDate>
+            <link>/schedule/</link>
+            <guid>/schedule/</guid>
+            <description>&lt;p&gt;We will play some sweet moves.&lt;&#x2F;p&gt;
 </description>
         </item>
     </channel>
