@@ -1,8 +1,6 @@
 +++
-title = "Slow Boil"
+title = "About"
 path = "about"
-
-
 date = 2019-03-21
 +++
 
