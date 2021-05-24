@@ -1,5 +1,5 @@
-  $('.navbar-container').hide()
-  $('.subnavbar-container').hide()
+$('.navbar-container').hide()
+$('.subnavbar-container').hide()
 
 function update_nav() {
   const y = $(this).scrollTop()
