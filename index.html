@@ -10,19 +10,19 @@
         crossorigin="anonymous"></script>
 </head>
 <body>
-    <div id='header-background'>
+    <div id='header-background' class='page' data-path='/'>
         <div class='panel-header'>
             <img src='text.svg' class='title-header' />
         </div>
     </div>
     <div id='content-background'>
         <div class='navbar-container backdrop-blur'>
-            <a class='navbar-block' href='#'>
+            <a class='navbar-block' onclick='goTo("/about")'>
                 <div>
                     <div>About</div>
                 </div>
             </a>
-            <a class='navbar-block' href='#'>
+            <a class='navbar-block' onclick='goTo("/schedule")'>
                 <div>
                     <div>Schedule</div>
                 </div>
@@ -32,31 +32,62 @@
             <!--         <div>Research</div> -->
             <!--     </div> -->
             <!-- </a> -->
-            <a class='navbar-block' href='#'>
+            <a class='navbar-block' onclick='goTo("/participants")'>
                 <div>
                     <div>Participants</div>
                 </div>
             </a>
         </div>
-        <div class='subnavbar-container backdrop-blur'>
-            <a class='subnavbar-block' href='#'>
+        <div class='subnavbar-container backdrop-blur page' data-path='/schedule'>
+            <a class='subnavbar-block' onclick='goTo("/")'>
                 <div>
                     <div>Schedule</div>
                 </div>
             </a>
-            <a class='subnavbar-block' href='#'>
+            <a class='subnavbar-block' onclick='goTo("/")'>
                 <div>
                     <div>Calendar</div>
                 </div>
             </a>
-
         </div>
-        <div class='panel-body'>
+
+        <div class='page about-body' data-path='/about'>
             <p>What can the sharing of kai do to transform how we conceive of knowledge, resilience and mana motuhake?</p>
             <p>Artspace Aotearoa is proud to present Slow Boil (29 May - 7 August) an unfolding exhibition and public creative research project. Slow Boil is co-created by kaupapa Māori community group and kai security advocates Boil Up Crew and a group of contributing practitioners spanning architecture, community advocacy, design, food sovereignty, software and the visual arts. During a series of wānanga, works will be collectively produced and installed in the exhibition space alongside existing investigative works by Forensic Architecture.</p>
             <p>Slow Boil is convened by Architectural Researcher Karamia Müller (University of Auckland) and Software Researcher Lachlan Kermode (Forensic Architecture), who worked together on the research project Violent Legalities, which was on show at Adam Art Gallery, Pōneke Wellington, 2020. Through co-design, and co-curation with Grayson Goffe of Boil Up Crew, the project aims to explore the relationship between the mahi ngā-kai/kai rituals, and tā wahi/notions of space, mana motuhake/sovereignty, and mapping.</p>
             <p>The exhibition opens with the idea that recipes and kai are vessels of intergenerational knowledge transfer, the means to an embodied life force that resists colonisation, and nourishing of community in the Karangahape Road, Tāmaki Makaurau Auckland and Aotearoa New Zealand context. By both sharing and mapping kai ecologies in Tāmaki Makaurau Auckland, the exhibition aims to bring greater visibility to kai insecurity facing urban communities. Following Maramataka, the Māori lunar calendar, concepts will be unearthed over the course of the exhibition towards a shared vision of kai security in the Karangahape community.</p>
         </div>
+
+        <div class='page schedule-body' data-path='/schedule'>
+            <div class='schedule-schedule'>
+                <div class='schedule-tab'>
+                    <p class='schedule-cs'>Currently showing:</p>
+                    <p>29 May – 06 June</p>
+                    <p style='margin: 1em auto 0.2em auto;'>Forensic Architecture</p>
+                    <p style='margin: 0.2em auto 1em auto;'>CLOUD STUDIES</p>
+                    <p>32 minutes</p>
+                </div>
+                <div class='schedule-tab'>
+                    <p class='schedule-cs'>Up next:</p>
+                    <p>06 June – 13 June</p>
+                    <p style='margin: 1em auto 0.2em auto;'>Sky Hopinka</p>
+                    <p style='margin: 0.2em auto 1em auto;'>FILM TITLE</p>
+                    <p>5 minutes</p>
+                </div>
+            </div>
+        </div>
+
+        <div class='page participants-body' data-path='/participants'>
+            <p>Schedule coming along...</p>
+            <p>Schedule coming along...</p>
+            <p>Schedule coming along...</p>
+            <p>Schedule coming along...</p>
+            <p>Schedule coming along...</p>
+            <p>Schedule coming along...</p>
+            <p>Schedule coming along...</p>
+        </div>
+
+
     </div>
 </body>
 <script src='index.js'></script>

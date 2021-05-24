@@ -27,6 +27,7 @@ a {
   text-decoration: none;
 }
 
+/* HEADER */
 #header-background {
   background-color: var(--bg-blue);
   /* background-image: linear-gradient(var(--bg-blue), var(--bg-blue), var(--bg-blue), var(--accent-white)); */
@@ -71,27 +72,11 @@ a {
   transform: rotate(-10deg);
 }
 
-.box {
-  position: fixed;
-  top: 30%;
-  left: 40%;
-  color: #333;
-  font-weight: bolder;
-  width: 20%;
-  padding: 1rem;
-  border-radius: 5px;
-  background-color: rgba(255, 255, 255, 0.5);
-  -webkit-backdrop-filter: blur(4px);
-  -o-backdrop-filter: blur(4px);
-  -moz-backdrop-filter: blur(4px);
-
-  backdrop-filter: blur(4px);
-}
-
+/* NAV */
 .navbar-container {
   position: fixed;
   top: 0;
-  width: calc(100vw - 21px);
+  width: calc(100vw);
   min-height: 150px;
   background-color: transparent;
   /* dotted bottom border */
@@ -125,6 +110,10 @@ a {
   border-bottom: 2px solid transparent;
 }
 
+.navbar-block:hover, .subnavbar-block:hover {
+  cursor: pointer;
+}
+
 .navbar-block:hover div, .subnavbar-block:hover div {
   border-bottom: 2px solid var(--accent-white);
 }
@@ -132,7 +121,7 @@ a {
 .subnavbar-container {
   position: fixed;
   top: var(--navbar-height);
-  width: calc(100vw - 21px);
+  width: calc(100vw);
   min-height: calc(var(--navbar-height) / 2);
   background-color: transparent;
   /* dotted bottom border */
@@ -154,7 +143,41 @@ a {
 }
 
 
-.panel-body {
-  padding-top: 5em;
+/* PAGES */
+.about-body {
+  padding-top: 8em;
 }
+
+.schedule-body {
+  padding-top: 10em;
+  font-size: 24pt;
+}
+
+.schedule-schedule {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.schedule-tab {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.schedule-tab p {
+  margin: 1em auto;
+  text-align: center;
+}
+
+.schedule-tab p.schedule-cs {
+  margin: 3em auto 2em auto;
+}
+
+.participants-body {
+  padding-top: 8em;
+}
+
 

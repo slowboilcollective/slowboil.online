@@ -1,7 +1,8 @@
 $('.navbar-container').hide()
 $('.subnavbar-container').hide()
 
-function update_nav() {
+function fade_nav_on_main() {
+  if (window.location.pathname !== '/') return
   const y = $(this).scrollTop()
   if (y > 700) {
     $('.navbar-container').fadeIn()
@@ -13,42 +14,34 @@ function update_nav() {
 }
 
 $(document).scroll(function() {
-  update_nav()
+  fade_nav_on_main()
 })
 
 /* ROUTING */
 let PATHNAME = window.location.pathname
-function update() {
-  PATHNAME = window.location.pathname
-}
-function goToPath(pth) {
+
+function goTo(pth) {
   window.history.pushState({}, "", pth)
+  $('.page').map(function() {
+    if ($(this).data('path') === pth) {
+      $(this).show()
+    } else {
+      $(this).hide()
+    }
+  })
 }
-function scrollTo(elId) {
-  const el = document.getElementById(elId)
-  const width  = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-  if (width < 1080) {
-
-    const rect = el.getBoundingClientRect()
-    window.scrollTo(0, rect.top - 60)
-
-  }
-  // else {
-  //   el.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"})
-  // }
-}
-
-window.clickHandler = function clickHandler(pth) {
-  goToPath(pth)
-  // scrollTo(`${pth.split('/')[1]}-label`)
-}
-
 
 // go to path if given
-if (PATHNAME !== "/") {
-  const id = PATHNAME.split("/")[1]
-  document.getElementById(id).checked = true
-  scrollTo(`${id}-label`)
+if (window.location.pathname !== "/") {
+  goTo(window.location.pathname)
+} else {
+  $('.page').map(function() {
+    if ($(this).data('path') === '/' || $(this).data('path') === '/about') {
+      $(this).show()
+    } else {
+      $(this).hide()
+    }
+  })
 }
 
 
