@@ -108,6 +108,15 @@
         </div>
     </div>
     <div id='content-overlay'></div>
+    <div class='mobile-navbar'>
+        <img id='mobile-hamburger' src='assets/hamburger.png' />
+    </div>
+    <div id='mobile-navbar' class='backdrop-blur'>
+        <a onclick='goTo("/about")'><div class='mobile-navbar-block'>About</div></a>
+        <a onclick='goTo("/schedule")'><div class='mobile-navbar-block'>Schedule</div></a>
+        <a onclick='goTo("/participants")'><div class='mobile-navbar-block'>Participants</div></a>
+    </div>
+
 </body>
 <script src='index.js'></script>
 </html>

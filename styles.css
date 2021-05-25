@@ -14,13 +14,13 @@
 body {
   font-family: var(--body-font);
   font-size: 18pt;
+  line-height: 22pt;
   color: var(--dark-blue);
   padding: 0;
   margin: 0;
 }
 
 p {
-  line-height: 22pt;
   margin: 2em auto;
   max-width: 600px;
 }
@@ -162,6 +162,7 @@ a {
 .page {
   z-index: -1;
   background-image: linear-gradient(var(--bg-blue), var(--bg-blue), var(--accent-white), var(--accent-white), var(--accent-white));
+  margin-bottom: 10em;
 }
 .about-body {
   padding-top: 8em;
@@ -224,11 +225,83 @@ a {
 }
 
 .participants-participant-info {
-  /* display: none; */
   padding: 0.2em 1em 1em 1em;
   font-size: 16pt;
   max-width: 700px;
   display: none;
 }
 
+.mobile-navbar {
+  display: none;
+}
 
+
+#mobile-navbar {
+  display: none;
+}
+
+/* mobile */
+@media only screen and (max-device-width: 480px) {
+  body {
+    font-size: 26pt;
+    line-height: 30pt;
+  }
+
+  p {
+    max-width: 85vw;
+  }
+
+  .navbar-container {
+    display: none;
+  }
+
+  .mobile-navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 10;
+
+    min-width: 100px;
+    height: 100px;
+    background: transparent;
+  }
+
+  .mobile-navbar img {
+    filter: invert(100%);
+    width: 125px;
+    height: 75px;
+  }
+
+  #mobile-navbar {
+    position: fixed;
+    top: 0;
+    display: none;
+    width: 100vw;
+    /* display: flex; */
+    flex-direction: column;
+    justify-content: flex-end;
+    background: transparent;
+    background-image: linear-gradient(to right, var(--accent-white) 33%, rgba(255,255,255,0) 0%);
+    background-position: bottom;
+    background-size: 20px 1px;
+    background-repeat: repeat-x;
+    padding-top: 100px;
+
+  }
+
+  .mobile-navbar-block {
+    font-size: 30pt;
+    color: var(--accent-white);
+    padding: 0.5em;
+    text-align: right;
+  }
+
+  .navbar-block {
+    display: none !important;
+  }
+
+
+}

@@ -29,7 +29,7 @@ function goTo(pth) {
 }
 
 // go to path if given
-if (window.location.pathname !== "/") {
+if (window.location.pathname !== "/" || window.location.pathname === '') {
   goTo(window.location.pathname)
 } else {
   $('.navbar-container').hide()
@@ -53,3 +53,13 @@ $('.participants-participant-info').mouseout(function() {
 })
 
 
+$('#mobile-hamburger').click(function() {
+  $('#mobile-navbar').toggle();
+})
+
+
+if (window.matchMedia("(max-width: 480px)").matches) {
+  $('.navbar-container').hide()
+  $('.subnavbar-container').hide()
+  $('#mobile-navbar').hide()
+}
