@@ -5,6 +5,7 @@
 
 :root {
   --bg-blue: rgb(94, 130, 194);
+  --dark-blue: rgb(34, 39, 90);
   --accent-white: white;
   --body-font: "Union";
   --navbar-height: 150px;
@@ -13,6 +14,7 @@
 body {
   font-family: var(--body-font);
   font-size: 18pt;
+  color: var(--dark-blue);
   padding: 0;
   margin: 0;
 }
@@ -29,7 +31,7 @@ a {
 
 /* HEADER */
 #header-background {
-  background-color: var(--bg-blue);
+  background: var(--bg-blue);
   /* background-image: linear-gradient(var(--bg-blue), var(--bg-blue), var(--bg-blue), var(--accent-white)); */
   height: 120vh;
   width: 100%;
@@ -57,10 +59,11 @@ a {
 }
 
 #content-overlay {
+  z-index: 1;
   position: fixed;
   top: 0;
   background-image: url('assets/cloud_boil.png');
-  opacity: 0.8;
+  opacity: 0.5;
   filter: invert(100%);
   width: 100vw;
   height: 100vh;
@@ -85,6 +88,7 @@ a {
 
 /* NAV */
 .navbar-container {
+  z-index: 3;
   position: fixed;
   top: 0;
   width: calc(100vw);
@@ -130,6 +134,7 @@ a {
 }
 
 .subnavbar-container {
+  z-index: 3;
   position: fixed;
   top: var(--navbar-height);
   width: calc(100vw);
@@ -156,6 +161,7 @@ a {
 
 /* PAGES */
 .page {
+  z-index: 2;
   background-image: linear-gradient(var(--bg-blue), var(--bg-blue), var(--accent-white), var(--accent-white), var(--accent-white));
 }
 .about-body {
@@ -200,7 +206,7 @@ a {
 }
 
 .participants-title {
-  border-bottom:
+  border-bottom: 1px solid blue;
 }
 
 
