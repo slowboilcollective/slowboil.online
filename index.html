@@ -12,9 +12,10 @@
 <body>
     <div id='header-background' class='page' data-path='/'>
         <div class='panel-header'>
-            <img src='text.svg' class='title-header' />
+            <img src='assets/slow_boil_white.png' class='title-header' />
         </div>
     </div>
+    <div id='content-overlay'></div>
     <div id='content-background'>
         <div class='navbar-container backdrop-blur'>
             <a class='navbar-block' onclick='goTo("/about")'>
@@ -40,7 +41,7 @@
         </div>
         <div class='subnavbar-container backdrop-blur page' data-path='/schedule'>
             <a class='subnavbar-block' onclick='goTo("/")'>
-                <div>
+                <div
                     <div>Schedule</div>
                 </div>
             </a>
@@ -78,16 +79,25 @@
         </div>
 
         <div class='page participants-body' data-path='/participants'>
-            <p>Schedule coming along...</p>
-            <p>Schedule coming along...</p>
-            <p>Schedule coming along...</p>
-            <p>Schedule coming along...</p>
-            <p>Schedule coming along...</p>
-            <p>Schedule coming along...</p>
-            <p>Schedule coming along...</p>
+            <div class='participants-block'>
+                <div class='participants-block-title'>Boil Up Crew:</div>
+                <div class='participants-participant'>Grayson Goffe</div>
+            </div>
+            <div class='participants-block'>
+                <div class='participants-block-title'>Slow Boil Collective:</div>
+                <div class='participants-participant'>Chiara Ficarelli</div>
+                <div class='participants-participant'>Matthew Galloway</div>
+                <div class='participants-participant'>Lachlan Kermode</div>
+                <div class='participants-participant'>Bhaveeka Madagammana</div>
+                <div class='participants-participant'>Karamia Müller</div>
+                <div class='participants-participant'>Blaine Western</div>
+            </div>
+            <div class='participants-block'>
+                <div class='participants-block-title'>With works by:</div>
+                <div class='participants-participant'>Forensic Architecture</div>
+                <div class='participants-participant'>Sky Hopinka</div>
+            </div>
         </div>
-
-
     </div>
 </body>
 <script src='index.js'></script>

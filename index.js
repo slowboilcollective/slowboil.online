@@ -1,6 +1,3 @@
-$('.navbar-container').hide()
-$('.subnavbar-container').hide()
-
 function fade_nav_on_main() {
   if (window.location.pathname !== '/') return
   const y = $(this).scrollTop()
@@ -35,6 +32,8 @@ function goTo(pth) {
 if (window.location.pathname !== "/") {
   goTo(window.location.pathname)
 } else {
+  $('.navbar-container').hide()
+  $('.subnavbar-container').hide()
   $('.page').map(function() {
     if ($(this).data('path') === '/' || $(this).data('path') === '/about') {
       $(this).show()
