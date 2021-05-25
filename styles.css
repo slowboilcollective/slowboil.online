@@ -59,7 +59,6 @@ a {
 }
 
 #content-overlay {
-  z-index: 1;
   position: fixed;
   top: 0;
   background-image: url('assets/cloud_boil.png');
@@ -67,6 +66,7 @@ a {
   filter: invert(100%);
   width: 100vw;
   height: 100vh;
+  z-index: 0;
 }
 
 .panel-header {
@@ -134,7 +134,6 @@ a {
 }
 
 .subnavbar-container {
-  z-index: 3;
   position: fixed;
   top: var(--navbar-height);
   width: calc(100vw);
@@ -161,7 +160,7 @@ a {
 
 /* PAGES */
 .page {
-  z-index: 2;
+  z-index: -1;
   background-image: linear-gradient(var(--bg-blue), var(--bg-blue), var(--accent-white), var(--accent-white), var(--accent-white));
 }
 .about-body {
@@ -199,15 +198,37 @@ a {
 .participants-body {
   padding-top: 8em;
   font-size: 20pt;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .participants-block {
-  padding: 1em;
+  z-index: 1;
+  margin: 1em 0 1em 25vw;
 }
 
-.participants-title {
-  border-bottom: 1px solid blue;
+.participants-block-title {
+  text-decoration: underline;
+  /* border-bottom: 1px solid var(--dark-blue); */
+  margin-bottom: 0.3em;
 }
 
+.participants-participant {
+  margin-bottom: 0.3em;
+}
+
+.participants-participant:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.participants-participant-info {
+  /* display: none; */
+  padding: 0.2em 1em 1em 1em;
+  font-size: 16pt;
+  max-width: 700px;
+  display: none;
+}
 
 

@@ -43,4 +43,13 @@ if (window.location.pathname !== "/") {
   })
 }
 
+$('.participants-participant').click(function() {
+  const info = $(this).next()
+  info.slideDown()
+})
+
+$('.participants-participant-info').mouseout(function() {
+  $(this).slideUp()
+})
+
 
