@@ -1,3 +1,5 @@
+var is_mobile = window.matchMedia("(max-device-width: 480px)").matches
+
 function fade_nav_on_main() {
   if (window.location.pathname !== '/') return
   const y = $(this).scrollTop()
@@ -11,6 +13,7 @@ function fade_nav_on_main() {
 }
 
 $(document).scroll(function() {
+  if (is_mobile) return
   fade_nav_on_main()
 })
 
@@ -58,7 +61,7 @@ $('#mobile-hamburger').click(function() {
 })
 
 
-if (window.matchMedia("(max-width: 480px)").matches) {
+if (is_mobile) {
   $('.navbar-container').hide()
   $('.subnavbar-container').hide()
   $('#mobile-navbar').hide()

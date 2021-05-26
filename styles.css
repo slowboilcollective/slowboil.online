@@ -4,7 +4,7 @@
 }
 
 :root {
-  --bg-blue: rgb(94, 130, 194);
+  --bg-blue: rgb(115, 142, 189);
   --dark-blue: rgb(34, 39, 90);
   --accent-white: white;
   --body-font: "Union";
@@ -13,8 +13,8 @@
 
 body {
   font-family: var(--body-font);
-  font-size: 18pt;
-  line-height: 22pt;
+  font-size: 34pt;
+  line-height: 46pt;
   color: var(--dark-blue);
   padding: 0;
   margin: 0;
@@ -22,7 +22,7 @@ body {
 
 p {
   margin: 2em auto;
-  max-width: 600px;
+  max-width: 70vw;
 }
 
 a {
@@ -31,9 +31,9 @@ a {
 
 /* HEADER */
 #header-background {
-  background: var(--bg-blue);
-  /* background-image: linear-gradient(var(--bg-blue), var(--bg-blue), var(--bg-blue), var(--accent-white)); */
-  height: 120vh;
+  /* background: var(--bg-blue); */
+  background-image: linear-gradient(var(--bg-blue), var(--bg-blue), var(--bg-blue), var(--accent-white));
+  height: 90vh;
   width: 100%;
   overflow-x: hidden;
   overflow-y: hidden;
@@ -44,7 +44,7 @@ a {
 #content-background {
   background-image: linear-gradient(var(--bg-blue), var(--bg-blue), var(--accent-white), var(--accent-white), var(--accent-white));
   /* Full height */
-  width: 100%;
+  width: 100vw;
   height: 0;
   overflow-x: hidden;
   overflow-y: hidden;
@@ -63,8 +63,9 @@ a {
   top: 0;
   background-image: url('assets/cloud_boil.png');
   opacity: 0.5;
-  filter: invert(100%);
-  width: 100vw;
+  /* filter: invert(100%); */
+  min-width: 100vw;
+  background-size: 100vw auto;
   height: 100vh;
   z-index: 0;
 }
@@ -82,8 +83,8 @@ a {
 .title-header {
   padding-top: 15vh;
   width: 50vh;
-  filter: invert(100%);
-  transform: rotate(-10deg);
+  /* filter: invert(100%); */
+  /* transform: rotate(-deg); */
 }
 
 /* NAV */
@@ -159,10 +160,22 @@ a {
 
 
 /* PAGES */
+.page-wrapper {
+  background-image: linear-gradient(var(--bg-blue), var(--bg-blue), var(--accent-white), var(--accent-white), var(--accent-white));
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
 .page {
   z-index: -1;
-  background-image: linear-gradient(var(--bg-blue), var(--bg-blue), var(--accent-white), var(--accent-white), var(--accent-white));
   margin-bottom: 10em;
+}
+
+.page h1 {
+  width: 100vw;
+  text-align: center;
 }
 .about-body {
   padding-top: 8em;
@@ -261,7 +274,7 @@ a {
     align-items: center;
     position: fixed;
     top: 0;
-    right: 0;
+    left: calc(10vw / 2);
     z-index: 10;
 
     min-width: 100px;
@@ -282,7 +295,7 @@ a {
     width: 100vw;
     /* display: flex; */
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: flex-start;
     background: transparent;
     background-image: linear-gradient(to right, var(--accent-white) 33%, rgba(255,255,255,0) 0%);
     background-position: bottom;
@@ -296,7 +309,8 @@ a {
     font-size: 30pt;
     color: var(--accent-white);
     padding: 0.5em;
-    text-align: right;
+    padding-left: calc(16vw / 2);
+    text-align: left;
   }
 
   .navbar-block {
