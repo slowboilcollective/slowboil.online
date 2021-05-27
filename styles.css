@@ -32,7 +32,7 @@ a {
 /* HEADER */
 #header-background {
   /* background: var(--bg-blue); */
-  background-image: linear-gradient(var(--bg-blue), var(--bg-blue), var(--bg-blue), var(--accent-white));
+  background-image: linear-gradient(var(--bg-blue), var(--bg-blue), var(--accent-white));
   height: 90vh;
   width: 100%;
   overflow-x: hidden;
@@ -42,7 +42,7 @@ a {
 }
 
 #content-background {
-  background-image: linear-gradient(var(--bg-blue), var(--bg-blue), var(--accent-white), var(--accent-white), var(--accent-white));
+  background-image: linear-gradient(var(--bg-blue), var(--accent-white));
   /* Full height */
   width: 100vw;
   height: 0;
@@ -66,7 +66,7 @@ a {
   /* filter: invert(100%); */
   min-width: 100vw;
   background-size: 100vw auto;
-  height: 100vh;
+  min-height: 100vh;
   z-index: 0;
 }
 
@@ -81,8 +81,8 @@ a {
 }
 
 .title-header {
-  padding-top: 15vh;
-  width: 50vh;
+  padding-top: 5vh;
+  width: 80vh;
   /* filter: invert(100%); */
   /* transform: rotate(-deg); */
 }
@@ -315,6 +315,12 @@ a {
 
   .navbar-block {
     display: none !important;
+  }
+
+  #content-overlay {
+    background-image: url('assets/cloud_boil_mobile.png');
+    background-size: auto 100vh;
+
   }
 
 
