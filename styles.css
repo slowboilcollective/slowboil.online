@@ -1,0 +1,344 @@
+@font-face {
+  font-family: "Union";
+  src: url("./assets/union_regular.otf") format("opentype");
+}
+
+:root {
+  --bg-blue: rgb(115, 142, 189);
+  --dark-blue: rgb(34, 39, 90);
+  --accent-white: white;
+  --body-font: "Union";
+  --navbar-height: 150px;
+}
+
+body {
+  font-family: var(--body-font);
+  font-size: 34pt;
+  line-height: 46pt;
+  color: var(--dark-blue);
+  padding: 0;
+  margin: 0;
+}
+
+p {
+  margin: 2em auto;
+  max-width: 70vw;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* HEADER */
+#header-background {
+  /* background: var(--bg-blue); */
+  background-image: linear-gradient(var(--bg-blue), var(--bg-blue), var(--accent-white));
+  height: 90vh;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  padding: 0;
+  margin: 0;
+}
+
+#content-background {
+  background-image: linear-gradient(var(--bg-blue), var(--accent-white));
+  /* Full height */
+  width: 100vw;
+  height: 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  padding: 0;
+  margin: 0;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#content-overlay {
+  position: fixed;
+  top: 0;
+  background-image: url('assets/cloud_boil.png');
+  opacity: 0.5;
+  /* filter: invert(100%); */
+  min-width: 100vw;
+  background-size: 100vw auto;
+  min-height: 100vh;
+  z-index: 0;
+}
+
+.panel-header {
+  overflow-x: hidden;
+  overflow-y: hidden;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.title-header {
+  padding-top: 5vh;
+  width: 80vh;
+  /* filter: invert(100%); */
+  /* transform: rotate(-deg); */
+}
+
+/* NAV */
+.navbar-container {
+  z-index: 3;
+  position: fixed;
+  top: 0;
+  width: calc(100vw);
+  min-height: 150px;
+  background-color: transparent;
+  /* dotted bottom border */
+  background-image: linear-gradient(to right, var(--accent-white) 33%, rgba(255,255,255,0) 0%);
+  background-position: bottom;
+  background-size: 8px 1px;
+  background-repeat: repeat-x;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar-block, .subnavbar-block {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /*Vertical*/
+  background-image: linear-gradient(var(--accent-white) 33%, rgba(255,255,255,0) 0%);
+  background-position: right;
+  background-size: 1px 8px;
+  background-repeat: repeat-y;
+}
+
+.navbar-block div, .subnavbar-block div {
+  font-size: 14pt;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--accent-white);
+  border-bottom: 2px solid transparent;
+}
+
+.navbar-block:hover, .subnavbar-block:hover {
+  cursor: pointer;
+}
+
+.navbar-block:hover div, .subnavbar-block:hover div {
+  border-bottom: 2px solid var(--accent-white);
+}
+
+.subnavbar-container {
+  position: fixed;
+  top: var(--navbar-height);
+  width: calc(100vw);
+  min-height: calc(var(--navbar-height) / 2);
+  background-color: transparent;
+  /* dotted bottom border */
+  background-image: linear-gradient(to right, var(--accent-white) 33%, rgba(255,255,255,0) 0%);
+  background-position: bottom;
+  background-size: 8px 1px;
+  background-repeat: repeat-x;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+@supports ((-webkit-backdrop-filter: blur(2em)) or (backdrop-filter: blur(2em))) {
+  .backdrop-blur {
+    background-color: transparent;
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+  }
+}
+
+
+/* PAGES */
+.page-wrapper {
+  background-image: linear-gradient(var(--bg-blue), var(--bg-blue), var(--accent-white), var(--accent-white), var(--accent-white));
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+.page {
+  z-index: -1;
+  margin-bottom: 10em;
+}
+
+.page h1 {
+  width: 100vw;
+  text-align: center;
+}
+.about-body {
+  padding-top: 8em;
+}
+
+.schedule-body {
+  padding-top: 6em;
+  font-size: 24pt;
+}
+
+.schedule-schedule {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0 2em;
+}
+
+.schedule-tab {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.schedule-tab p {
+  margin: 1em auto;
+  text-align: center;
+}
+
+.schedule-tab p.schedule-cs {
+  margin: 3em auto 2em auto;
+}
+
+.participants-body {
+  padding-top: 8em;
+  font-size: 20pt;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.participants-block {
+  z-index: 1;
+  margin: 1em 0 1em 25vw;
+}
+
+.participants-block-title {
+  text-decoration: underline;
+  /* border-bottom: 1px solid var(--dark-blue); */
+  margin-bottom: 0.3em;
+}
+
+.participants-participant {
+  margin-bottom: 0.3em;
+}
+
+.participants-participant:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.participants-participant-info {
+  padding: 0.2em 1em 1em 1em;
+  font-size: 16pt;
+  line-height: 20pt;
+  max-width: 700px;
+  display: none;
+}
+
+.mobile-navbar {
+  display: none;
+}
+
+
+#mobile-navbar {
+  display: none;
+}
+
+/* mobile */
+@media only screen and (max-device-width: 480px) {
+  body {
+    font-size: 26pt;
+    line-height: 30pt;
+  }
+
+  p {
+    max-width: 85vw;
+  }
+
+  .navbar-container {
+    display: none;
+  }
+
+  .mobile-navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: calc(10vw / 2);
+    z-index: 10;
+
+    min-width: 100px;
+    height: 100px;
+    background: transparent;
+  }
+
+  .mobile-navbar img {
+    filter: invert(100%);
+    width: 125px;
+    height: 75px;
+  }
+
+  #mobile-navbar {
+    position: fixed;
+    top: 0;
+    display: none;
+    width: 100vw;
+    /* display: flex; */
+    flex-direction: column;
+    justify-content: flex-start;
+    background: transparent;
+    background-image: linear-gradient(to right, var(--accent-white) 33%, rgba(255,255,255,0) 0%);
+    background-position: bottom;
+    background-size: 20px 1px;
+    background-repeat: repeat-x;
+    padding-top: 100px;
+  }
+
+  .schedule-schedule {
+    flex-direction: column;
+  }
+
+  .schedule-tab {
+    width: 100vw;
+    border-bottom: 1px solid var(--dark-blue);
+    padding-bottom: 3em;
+  }
+
+  .schedule-tab p {
+    margin: 1em auto;
+    text-align: center;
+  }
+
+  .mobile-navbar-block {
+    font-size: 30pt;
+    color: var(--accent-white);
+    padding: 0.5em;
+    padding-left: calc(16vw / 2);
+    text-align: left;
+  }
+
+  .navbar-block {
+    display: none !important;
+  }
+
+  #content-overlay {
+    background-image: url('assets/cloud_boil_mobile.png');
+    background-size: auto 100vh;
+  }
+
+  .participants-block {
+    margin: 1em 3em;
+  }
+}
