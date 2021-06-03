@@ -182,7 +182,7 @@ a {
 }
 
 .schedule-body {
-  padding-top: 10em;
+  padding-top: 6em;
   font-size: 24pt;
 }
 
@@ -190,6 +190,7 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  padding: 0 2em;
 }
 
 .schedule-tab {
@@ -240,6 +241,7 @@ a {
 .participants-participant-info {
   padding: 0.2em 1em 1em 1em;
   font-size: 16pt;
+  line-height: 20pt;
   max-width: 700px;
   display: none;
 }
@@ -302,7 +304,21 @@ a {
     background-size: 20px 1px;
     background-repeat: repeat-x;
     padding-top: 100px;
+  }
 
+  .schedule-schedule {
+    flex-direction: column;
+  }
+
+  .schedule-tab {
+    width: 100vw;
+    border-bottom: 1px solid var(--dark-blue);
+    padding-bottom: 3em;
+  }
+
+  .schedule-tab p {
+    margin: 1em auto;
+    text-align: center;
   }
 
   .mobile-navbar-block {
@@ -320,8 +336,9 @@ a {
   #content-overlay {
     background-image: url('assets/cloud_boil_mobile.png');
     background-size: auto 100vh;
-
   }
 
-
+  .participants-block {
+    margin: 1em 3em;
+  }
 }

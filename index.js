@@ -22,6 +22,7 @@ let PATHNAME = window.location.pathname
 
 function goTo(pth) {
   window.history.pushState({}, "", pth)
+  window.scrollTo(0,0)
   $('.page').map(function() {
     if ($(this).data('path') === pth) {
       $(this).show()
