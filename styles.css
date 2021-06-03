@@ -338,7 +338,16 @@ a {
     background-size: auto 100vh;
   }
 
+  .participants-body {
+    font-size: 24pt;
+    line-height: 28pt;
+  }
+
   .participants-block {
     margin: 1em 3em;
+  }
+
+  .participants-participant {
+    margin-bottom: 1em;
   }
 }

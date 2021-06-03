@@ -21,6 +21,7 @@ $(document).scroll(function() {
 let PATHNAME = window.location.pathname
 
 function goTo(pth) {
+  $('#mobile-navbar').toggle();
   window.history.pushState({}, "", pth)
   window.scrollTo(0,0)
   $('.page').map(function() {
