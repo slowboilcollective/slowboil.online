@@ -37,6 +37,12 @@
                     <div>Collective</div>
                 </div>
             </a>
+            <a class='navbar-block' onclick='goTo("/workshops")'>
+                <div>
+                    <div>Workshops</div>
+                </div>
+            </a>
+
         </div>
         <div class='subnavbar-container backdrop-blur page' data-path='/schedule'>
             <a class='subnavbar-block' onclick='goTo("/")'>
@@ -66,15 +72,15 @@
                     <div class='schedule-tab'>
                         <p class='schedule-cs'>Currently showing:</p>
                         <p>29 May – 20 June</p>
-                        <p style='margin: 1em auto 0.2em auto;'>Jumana Manna</p>
-                        <p style='margin: 0.2em auto 0.2em auto;'>WILD RELATIVES</p>
+                        <p style='margin: 1em 0 0.2em 0;'>Jumana Manna</p>
+                        <p style='margin: 0.2em 0 0.2em 0;'>WILD RELATIVES</p>
                         <p style=>64 minutes</p>
                     </div>
                     <div class='schedule-tab'>
                         <p class='schedule-cs'>Up next:</p>
                         <p>20 June – 11 July</p>
-                        <p style='margin: 1em auto 0.2em auto;'>Sky Hopinka</p>
-                        <p style='margin: 0.2em auto 1em auto;'>DISLOCATION BLUES -- REMEMBER YOU AS YOU WERE, NOT AS WHAT YOU'LL BECOME -- JAAJI APPROX.</p>
+                        <p style='margin: 1em 0 0.2em 0;'>Sky Hopinka</p>
+                        <p style='margin: 0.2em 0 1em 0;'>DISLOCATION BLUES -- REMEMBER YOU AS YOU WERE, NOT AS WHAT YOU'LL BECOME -- JAAJI APPROX.</p>
                         <p>17 minutes -- 12 minutes -- 8 minutes</p>
 
                     </div>
@@ -116,6 +122,24 @@
                 </div>
             </div>
         </div>
+
+        <div class='page-wrapper'>
+            <div class='page' data-path='/workshops'>
+                <div id='workshop-content'>
+                    <iframe id='workshop-iframe' frameBorder='0' scrolling='auto'></iframe>
+                </div>
+                <div id='workshop-loading'>
+                    <div>L.o.a.d.i.n.G</div>
+                    <div>l.O.a.d.i.N.g</div>
+                    <div>l.o.A.d.I.n.g</div>
+                    <div>l.o.a.D.i.n.g</div>
+                    <div>l.o.A.d.I.n.g</div>
+                    <div>l.O.a.d.i.N.g</div>
+                    <div>L.o.a.d.i.n.G</div>
+                </div>
+            </div>
+        </div>
+
     </div>
     <div id='content-overlay'></div>
     <div class='mobile-navbar'>
@@ -125,6 +149,7 @@
         <a onclick='goTo("/about")'><div class='mobile-navbar-block'>About</div></a>
         <a onclick='goTo("/schedule")'><div class='mobile-navbar-block'>Schedule</div></a>
         <a onclick='goTo("/collective")'><div class='mobile-navbar-block'>Collective</div></a>
+        <a onclick='goTo("/workshops")'><div class='mobile-navbar-block'>Workshops</div></a>
     </div>
 
 </body>

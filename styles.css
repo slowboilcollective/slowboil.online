@@ -202,12 +202,12 @@ a {
 }
 
 .schedule-tab p {
-  margin: 1em auto;
-  text-align: center;
+  margin: 1em 0;
+  text-align: left;
 }
 
 .schedule-tab p.schedule-cs {
-  margin: 3em auto 2em auto;
+  margin: 3em 0 2em 0;
 }
 
 .participants-body {
@@ -253,6 +253,13 @@ a {
 
 #mobile-navbar {
   display: none;
+}
+
+#workshop-iframe {
+  width: 100vw;
+  margin: var(--navbar-height) 15vw 0 15vw;
+  min-height: calc(100vh - 200px);
+  z-index: 5;
 }
 
 /* mobile */
